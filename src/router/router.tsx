@@ -1,9 +1,8 @@
-// importacion de la rutas
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// importacion del main principal
 import Home from "../pages/Home/Home";
 import Register from "../pages/Register/Register";
+import Login from "@/pages/Login/Login";
 
 const Router = () => {
   return (
@@ -11,6 +10,7 @@ const Router = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>
       </BrowserRouter>
