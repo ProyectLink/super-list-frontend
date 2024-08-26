@@ -11,6 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 import IconGoogle from "@/icons/Google";
 
 const Register = () => {
@@ -104,6 +105,15 @@ const Register = () => {
                 >
                   terms and conditions
                 </a>
+                <p className="text-center text-sm text-gray-500">
+                  Already have an account?{" "}
+                  <Link
+                    to="/login"
+                    className="font-medium text-primary hover:underline"
+                  >
+                    Log in
+                  </Link>
+                </p>
               </p>
             </CardFooter>
           </Card>
