@@ -53,7 +53,7 @@ export default function Login() {
             </div>
           </div>
         </div>
-        <div className="hidden w-full bg-muted lg:block ">
+        <div className="hidden w-full bg-muted lg:block">
           <img
             src="/login/sun-tornado.svg"
             alt="Image"

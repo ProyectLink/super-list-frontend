@@ -22,9 +22,9 @@ const Register = () => {
 
   return (
     <>
-      <div className="flex flex-col lg:flex-row min-h-screen">
-        {/* Carousel - Hidden on mobile, visible on tablets and desktops */}
-        <div className="hidden lg:block lg:w-1/2 bg-muted relative">
+      <div className="flex flex-col justify-center min-h-screen lg:flex-row">
+        {/* Image */}
+        <div className="hidden w-full bg-muted lg:block">
           <img
             src="/login/rainbow-vortex.svg"
             alt="Image"
@@ -33,7 +33,7 @@ const Register = () => {
         </div>
 
         {/* Registration - Always visible */}
-        <div className="w-full lg:w-1/2 flex items-center justify-center p-4 lg:p-8">
+        <div className="flex items-center justify-center w-full lg:w-1/2 p-6 lg:p-8">
           <Card className="w-full max-w-md">
             <CardHeader className="space-y-1 text-center">
               <CardTitle className="text-2xl font-bold">
@@ -44,13 +44,15 @@ const Register = () => {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="nombre">Name</Label>
-                <Input id="nombre" placeholder="Enter your name" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="apellido">Last Name</Label>
-                <Input id="apellido" placeholder="Enter your last name" />
+              <div className="flex flex-col lg:flex-row gap-3">
+                <div className="space-y-2">
+                  <Label htmlFor="nombre">Name</Label>
+                  <Input id="nombre" placeholder="Enter your name" />
+                </div>
+                <div className="space-y-2 ">
+                  <Label htmlFor="apellido">Last Name</Label>
+                  <Input id="apellido" placeholder="Enter your last name" />
+                </div>
               </div>
 
               <div className="space-y-2">
