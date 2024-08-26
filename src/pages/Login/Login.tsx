@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import IconGoogle from "@/icons/Google";
 import { Link } from "react-router-dom";
+import IconGoogle from "@/icons/Google";
 
 export default function Login() {
   return (
@@ -47,7 +47,7 @@ export default function Login() {
             </div>
             <div className="mt-4 text-sm text-center">
               Don&apos;t have an account?{" "}
-              <Link to="#" className="underline">
+              <Link to="/register" className="underline">
                 Sign up
               </Link>
             </div>
