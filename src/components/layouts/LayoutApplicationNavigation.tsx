@@ -14,7 +14,7 @@ const LayoutApplicationNavigation = ({
 }: LayoutApplicationNavigationProps) => {
   return (
     <>
-      <div {...rest} className={twMerge("", className)}>
+      <div {...rest} className={twMerge("bg-white w-60", className)}>
         {children}
       </div>
     </>

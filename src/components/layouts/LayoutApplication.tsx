@@ -15,7 +15,10 @@ const LayoutApplication = ({
     <>
       <div
         {...rest}
-        className={twMerge("min-h-dvh max-h-dvh bg-black", className)}
+        className={twMerge(
+          "min-h-dvh max-h-dvh flex w-full gap-2 bg-gray-100",
+          className
+        )}
       >
         {children}
       </div>

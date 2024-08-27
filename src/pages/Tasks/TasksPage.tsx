@@ -2,21 +2,25 @@ import LayoutApplication from "@/components/layouts/LayoutApplication";
 import LayoutApplicationNavigation from "@/components/layouts/LayoutApplicationNavigation";
 import LayoutApplicationSection from "@/components/layouts/LayoutApplicationSection";
 import Navigation from "@/components/navigation/Navigation";
+import Tasks from "@/components/tasks/Tasks";
 
 const TasksPage = () => {
   return (
     <>
-      <LayoutApplication className="flex w-full gap-2 bg-neutral-900">
-        <LayoutApplicationNavigation className="bg-neutral-800 w-60">
+      <LayoutApplication>
+        <LayoutApplicationNavigation>
           <Navigation />
         </LayoutApplicationNavigation>
 
-        <LayoutApplicationSection className="my-2 grow rounded-2xl bg-neutral-800">
-          <div></div>
+        <LayoutApplicationSection className="flex-1 my-2 bg-white rounded-2xl">
+          <Tasks />
         </LayoutApplicationSection>
 
-        <LayoutApplicationSection className="my-2 rounded-2xl grow bg-neutral-800 me-2">
-          <div></div>
+        <LayoutApplicationSection className="flex-1 my-2 overflow-hidden bg-white rounded-2xl me-2">
+          <img
+            src="/subsets/1496373.jpg"
+            className="object-cover object-center w-full h-full"
+          />
         </LayoutApplicationSection>
       </LayoutApplication>
     </>
