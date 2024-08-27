@@ -84,8 +84,8 @@ const AppLaunchComplete = () => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row">
-        <aside className="w-64 bg-white p-4 hidden md:block rounded-lg overflow-hidden shadow-md">
+      <div className="flex flex-col flex-row md:flex-row m-auto">
+        <aside className="w-52 bg-white p-4 hidden md:block rounded-3xl overflow-hidden shadow-md">
           <h2 className="text-lg font-semibold mb-4">Lists</h2>
           <nav>
             {initialProjects.map(project => (
@@ -105,8 +105,8 @@ const AppLaunchComplete = () => {
           </nav>
         </aside>
 
-        <div className="flex-1 flex flex-col">
-          <Card className="m-2 flex-1 overflow-auto rounded-lg shadow-md">
+        <div className="flex-1 flex flex-col ">
+          <Card className="h-10 m-2 flex-1  rounded-3xl ">
             <CardHeader className="flex flex-col space-y-1.5 pb-4">
               <div className="flex items-center justify-between">
                 <CardTitle className="text-2xl font-bold">App Launch</CardTitle>
@@ -185,7 +185,7 @@ const AppLaunchComplete = () => {
           </Card>
         </div>
 
-        <div className="hidden lg:block w-1/3 rounded-lg overflow-hidden shadow-md">
+        <div className="w-52 lg:block w-1/3 rounded-3xl overflow-hidden shadow-md">
           <img
             src="https://cdn.pixabay.com/photo/2022/11/22/10/37/house-7609267_960_720.jpg"
             alt="Paisaje nocturno con luna llena"

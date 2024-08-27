@@ -6,32 +6,33 @@ const Home = () => {
   return (
     <>
       <div className="flex flex-col min-h-screen bg-background text-foreground">
-        <header className="px-4 lg:px-6 h-14 flex items-center">
+        <div className="bg-red-500 h-1"></div>
+        <header className="px-4 lg:px-6 h-14 flex items-center p-4 bg-muted/50">
           <Link className="flex items-center justify-center" to="#">
-            logo
-            <span className="ml-2 text-lg font-semibold">Acme Inc</span>
+            <img className="w-28" src="./public/img/logo.png" alt="logo" />
+            <span className="ml-2 text-lg font-semibold"> </span>
           </Link>
           <nav className="ml-auto flex gap-4 sm:gap-6">
             <Link
-              className="text-sm font-medium hover:underline underline-offset-4 font-semibold"
+              className="text-lg font-medium hover:text-gray-500  font-semibold"
               to="#inicio"
             >
               Inicio
             </Link>
             <Link
-              className="text-sm font-medium hover:underline underline-offset-4 font-semibold"
+              className="text-lg font-medium hover:text-gray-500   font-semibold"
               to="#caracteristicas"
             >
               Características
             </Link>
             <Link
-              className="text-sm font-medium hover:underline underline-offset-4 font-semibold"
+              className="text-lg font-medium hover:text-gray-500  font-semibold"
               to="#galeria"
             >
               Galería
             </Link>
             <Link
-              className="text-sm font-medium hover:underline underline-offset-4 font-semibold"
+              className="text-lg font-medium hover:text-gray-500   font-semibold"
               to="#contacto"
             >
               Contacto
@@ -42,21 +43,25 @@ const Home = () => {
         <main className="flex-1">
           <section
             id="inicio"
-            className="w-full py-12 md:py-24 lg:py-32 xl:py-48"
+            className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-muted/50 "
           >
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+                  <h1 className="text-3xl font-bold tracking-tighter text-gray-700 sm:text-4xl md:text-5xl lg:text-6xl/none">
                     Bienvenido a Nuestra Página
                   </h1>
-                  <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+                  <p className="mx-auto max-w-[700px] text-gray-400 md:text-xl font-semibold ">
                     Descubre la simplicidad y elegancia de nuestro diseño
                   </p>
                 </div>
                 <div className="space-x-4">
-                  <Button>Comenzar</Button>
-                  <Button variant="outline">Saber más</Button>
+                  <Button className="bg-red-500 rounded-3xl hover:scale-110 transition-transform hover:bg-red-500">
+                    Comenzar
+                  </Button>
+                  <Button className="bg-violet-600 rounded-3xl outline hover:scale-110 transition-transform hover:bg-violet-600">
+                    Saber más
+                  </Button>
                 </div>
               </div>
             </div>
@@ -64,7 +69,7 @@ const Home = () => {
 
           <section
             id="caracteristicas"
-            className="w-full py-12 md:py-24 lg:py-32 bg-muted/50"
+            className="w-auto py-12 md:py-24 lg:py-32 bg-muted/50"
           >
             <div className="container px-4 md:px-6">
               <AppLaunchComplete />
