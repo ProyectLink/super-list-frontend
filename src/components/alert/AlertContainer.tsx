@@ -16,7 +16,7 @@ const AlertContainer = ({
       <div
         {...rest}
         className={twMerge(
-          "flex items-center justify-between w-full gap-2 px-2 py-2 mt-3 text-indigo-400 bg-gray-100 rounded-2xl",
+          "flex items-center justify-between gap-2 p-2 mt-3 text-indigo-400 bg-gray-100 rounded-3xl  w-fit",
           className
         )}
       >
