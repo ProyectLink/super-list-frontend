@@ -21,7 +21,7 @@ const Task = ({ id, onClick, className, title, ...rest }: TaskProps) => {
         {...rest}
         className={twMerge(
           `flex items-center w-full gap-2 py-1 group/task ps-8 pe-3 text-black ${
-            id === params.id
+            id === params.taskId
               ? "bg-indigo-50 border-r-orange-500 border-r-2"
               : ""
           }`,
