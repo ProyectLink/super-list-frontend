@@ -14,7 +14,13 @@ const LayoutApplicationSection = ({
 }: LayoutApplicationSectionProps) => {
   return (
     <>
-      <div {...rest} className={twMerge("", className)}>
+      <div
+        {...rest}
+        className={twMerge(
+          "flex-1 my-2 bg-white rounded-2xl overflow-hidden",
+          className
+        )}
+      >
         {children}
       </div>
     </>
