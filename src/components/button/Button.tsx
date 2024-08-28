@@ -1,11 +1,11 @@
 import { twMerge } from "tailwind-merge";
 
-interface AlertButtonProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ButtonIconProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   icon: React.ReactNode;
 }
 
-const AlertButton = ({ className, icon, ...rest }: AlertButtonProps) => {
+const ButtonIcon = ({ className, icon, ...rest }: ButtonIconProps) => {
   return (
     <>
       <div
@@ -21,4 +21,4 @@ const AlertButton = ({ className, icon, ...rest }: AlertButtonProps) => {
   );
 };
 
-export default AlertButton;
+export default ButtonIcon;

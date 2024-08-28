@@ -1,12 +1,12 @@
-import AlertButton from "@/components/alert/AlertButton";
 import { InformationCircleIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
+import ButtonIcon from "../button/Button";
 
 const NotFoundTask = () => {
   const navigate = useNavigate();
   return (
     <>
-      <AlertButton
+      <ButtonIcon
         className="mt-5 w-fit ms-5"
         icon={<XMarkIcon className="w-5 h-5" />}
         onClick={() => navigate("/all-tasks")}

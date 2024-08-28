@@ -22,6 +22,7 @@ export const Tasks = () => {
                 title={task.title}
                 id={task.id}
                 onClick={() => navigate(task.id)}
+                key={task.id}
               />
             );
           })}

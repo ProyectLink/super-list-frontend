@@ -5,7 +5,7 @@ import Register from "../pages/Register/Register";
 import Login from "@/pages/Login/Login";
 import Tasks from "@/components/tasks/Tasks";
 import Layout from "@/components/layouts/Layout";
-import SubTask from "@/pages/Tasks/SubTaskPage";
+import SubTask from "@/pages/Tasks/SubTask";
 
 const Router = () => {
   return (
@@ -16,7 +16,7 @@ const Router = () => {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="all-tasks" element={<Layout main={<Tasks />} />}>
-            <Route path=":id" element={<SubTask />} />
+            <Route path=":taskId" element={<SubTask />} />
           </Route>
         </Routes>
       </BrowserRouter>
