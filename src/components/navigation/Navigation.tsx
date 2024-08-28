@@ -18,14 +18,14 @@ export const Navigation = () => {
             <InboxIcon strokeWidth={2} className="w-4 h-4 text-orange-500" />
             <p className="font-[400]">Inbox</p>
           </NavigationItem>
-          <NavigationItem active={true}>
+          <NavigationItem active={false}>
             <CalendarDaysIcon
               strokeWidth={2}
               className="w-4 h-4 text-orange-500"
             />
             <p className="font-[400] ">Today</p>
           </NavigationItem>
-          <NavigationItem active={false}>
+          <NavigationItem active={true}>
             <CheckBadgeIcon
               strokeWidth={2}
               className="w-4 h-4 text-orange-500"
