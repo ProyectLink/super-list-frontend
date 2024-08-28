@@ -16,7 +16,7 @@ const TasksPage = () => {
           <Tasks />
         </LayoutApplicationSection>
 
-        <LayoutApplicationSection className="me-2">
+        <LayoutApplicationSection className="hidden me-2 lg:block">
           <img
             src="/subsets/1496373.jpg"
             className="object-cover object-center w-full h-full"
