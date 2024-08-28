@@ -1,8 +1,12 @@
 import Alert from "../alert/Alert";
 import TasksContainer from "./TasksContainer";
 import Task from "../task/Task";
+import { useNavigate } from "react-router-dom";
+import { FAKE_TASK_DATA } from "@/data/task";
+import { ITask } from "@/interfaces/interfaces";
 
 export const Tasks = () => {
+  const navigate = useNavigate();
   return (
     <>
       <TasksContainer>
@@ -12,9 +16,15 @@ export const Tasks = () => {
         </div>
 
         <div className="mt-8">
-          <Task title="Hacer tarea 1" active={false} />
-          <Task title="Hacer tarea 2" active={true} />
-          <Task title="Hacer tarea 3" active={false} />
+          {FAKE_TASK_DATA.map((task: ITask) => {
+            return (
+              <Task
+                title={task.title}
+                id={task.id}
+                onClick={() => navigate(task.id)}
+              />
+            );
+          })}
         </div>
       </TasksContainer>
     </>
