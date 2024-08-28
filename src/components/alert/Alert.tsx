@@ -3,7 +3,7 @@ import AlertContainer from "./AlertContainer";
 import AlertIcon from "./AlertIcon";
 import AlertMessage from "./AlertMessage";
 import AlertButtonsSection from "./AlertButtonsSection";
-import AlertButton from "./AlertButton";
+import ButtonIcon from "../button/Button";
 
 const Alert = () => {
   return (
@@ -14,8 +14,8 @@ const Alert = () => {
           message={" View, sort and access all of your tasks in one place"}
         />
         <AlertButtonsSection>
-          <AlertButton icon={<ArrowUpRightIcon className="w-5 h-5" />} />
-          <AlertButton icon={<XMarkIcon className="w-5 h-5" />} />
+          <ButtonIcon icon={<ArrowUpRightIcon className="w-5 h-5" />} />
+          <ButtonIcon icon={<XMarkIcon className="w-5 h-5" />} />
         </AlertButtonsSection>
       </AlertContainer>
     </>
