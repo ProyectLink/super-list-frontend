@@ -1,15 +1,11 @@
-import React from "react";
-import { twMerge } from "tailwind-merge";
+import Alert from "../alert/Alert";
 
-interface TasksProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string;
-}
-
-export const Tasks = ({ className, ...rest }: TasksProps) => {
+export const Tasks = () => {
   return (
     <>
-      <div {...rest} className={twMerge("", className)}>
-        <div className="mt-10 text-5xl font-bold ms-10 opacity-85">Tasks</div>
+      <div className={"w-10/12 mx-auto"}>
+        <div className="mt-10 text-5xl font-bold opacity-85">Tasks</div>
+        <Alert />
       </div>
     </>
   );

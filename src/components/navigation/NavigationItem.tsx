@@ -18,8 +18,10 @@ export const NavigationItem = ({
       <div
         {...rest}
         className={twMerge(
-          `flex items-center gap-2 ps-5 hover:bg-gray-100 py-1 hover:cursor-pointer ${
-            active ? "border-r-2 border-orange-500 bg-gray-100" : ""
+          `flex items-center gap-2 ps-5 hover:bg-indigo-50 py-1 hover:cursor-pointer ${
+            active
+              ? "border-r-2 border-orange-500 bg-indigo-50 hover:cursor-default"
+              : ""
           }`,
           className
         )}

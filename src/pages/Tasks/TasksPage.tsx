@@ -12,11 +12,11 @@ const TasksPage = () => {
           <Navigation />
         </LayoutApplicationNavigation>
 
-        <LayoutApplicationSection className="flex-1 my-2 bg-white rounded-2xl">
+        <LayoutApplicationSection>
           <Tasks />
         </LayoutApplicationSection>
 
-        <LayoutApplicationSection className="flex-1 my-2 overflow-hidden bg-white rounded-2xl me-2">
+        <LayoutApplicationSection className="me-2">
           <img
             src="/subsets/1496373.jpg"
             className="object-cover object-center w-full h-full"

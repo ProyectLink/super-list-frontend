@@ -1,23 +1,22 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
 
-interface LayoutApplicationSectionProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+interface AlertContainerProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
   className?: string;
 }
 
-const LayoutApplicationSection = ({
+const AlertContainer = ({
   children,
   className,
   ...rest
-}: LayoutApplicationSectionProps) => {
+}: AlertContainerProps) => {
   return (
     <>
       <div
         {...rest}
         className={twMerge(
-          "flex-1 my-2 bg-white rounded-2xl overflow-hidden",
+          "flex items-center justify-between gap-2 p-2 mt-3 text-indigo-400 bg-gray-100 rounded-3xl  w-fit",
           className
         )}
       >
@@ -27,4 +26,4 @@ const LayoutApplicationSection = ({
   );
 };
 
-export default LayoutApplicationSection;
+export default AlertContainer;
