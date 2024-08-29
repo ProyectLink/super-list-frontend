@@ -63,19 +63,19 @@ const Home = () => {
 
         <div className="px-5">
           {/* app sample */}
-          <div className="grid w-full grid-cols-4 gap-3 p-3 mx-auto mt-10 border size-96 rounded-2xl border-[#EAE9F3] max-w-[1250px] h-auto mb-10">
+          <div className="grid w-full grid-cols-4 gap-3 p-3 mx-auto mt-10 border-2 size-96 rounded-2xl border-[#EAE9F3] max-w-[1250px] h-auto mb-10">
             {/* col 1 */}
-            <div className="w-full h-full col-span-1 bg-white rounded-2xl">
+            <div className="hidden w-full h-full col-span-1 bg-white rounded-2xl lg:block">
               {/* rectangles */}
               <div className="grid grid-cols-2 gap-2 p-3">
-                <div className="w-full bg-[#F4F4F8] rounded-xl h-14"></div>
-                <div className="w-full bg-[#F4F4F8] rounded-xl h-14"></div>
-                <div className="w-full bg-[#F4F4F8] rounded-xl h-14"></div>
-                <div className="w-full bg-[#F4F4F8] rounded-xl h-14"></div>
+                <div className="w-full bg-[#F4F4F8] rounded-xl h-16"></div>
+                <div className="w-full bg-[#F4F4F8] rounded-xl h-16"></div>
+                <div className="w-full bg-[#F4F4F8] rounded-xl h-16"></div>
+                <div className="w-full bg-[#F4F4F8] rounded-xl h-16"></div>
               </div>
 
               {/* fake navigation */}
-              <div>
+              <div className="mt-6">
                 <div className="font-semibold text-gray-500 ms-3">List</div>
                 <NavigationItem
                   active={true}
@@ -119,10 +119,12 @@ const Home = () => {
             </div>
 
             {/* col mid */}
-            <div className="w-full h-full col-span-2 bg-white rounded-2xl"></div>
+            <div className="w-full h-full bg-white col-span-full lg:col-span-2 rounded-2xl">
+              <div className="w-full h-96">Fake data middle</div>
+            </div>
 
             {/* col 3 */}
-            <div className="w-full h-full col-span-1 overflow-hidden bg-white rounded-2xl">
+            <div className="hidden w-full h-full overflow-hidden bg-white lg:col-span-1 lg:block rounded-2xl">
               <img
                 className="object-cover object-center w-full h-full"
                 src="/subsets/1244429.jpg"
