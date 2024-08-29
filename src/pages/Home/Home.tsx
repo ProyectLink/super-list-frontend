@@ -1,89 +1,138 @@
-import AppLaunchComplete from "@/components/ui/AppLaunchComplete/AppLaunchComplete";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom"; // Importa el componente Link desde react-router-dom
+import NavigationItem from "@/components/navigation/NavigationItem";
+import { ArrowRight } from "lucide-react";
 
 const Home = () => {
   return (
     <>
-      <div className="flex flex-col min-h-screen bg-background text-foreground">
-        <header className="px-4 lg:px-6 h-14 flex items-center">
-          <Link className="flex items-center justify-center" to="#">
-            logo
-            <span className="ml-2 text-lg font-semibold">Acme Inc</span>
-          </Link>
-          <nav className="ml-auto flex gap-4 sm:gap-6">
-            <Link
-              className="text-sm font-medium hover:underline underline-offset-4 font-semibold"
-              to="#inicio"
-            >
-              Inicio
-            </Link>
-            <Link
-              className="text-sm font-medium hover:underline underline-offset-4 font-semibold"
-              to="#caracteristicas"
-            >
-              Características
-            </Link>
-            <Link
-              className="text-sm font-medium hover:underline underline-offset-4 font-semibold"
-              to="#galeria"
-            >
-              Galería
-            </Link>
-            <Link
-              className="text-sm font-medium hover:underline underline-offset-4 font-semibold"
-              to="#contacto"
-            >
-              Contacto
-            </Link>
-          </nav>
-        </header>
+      <div className="flex flex-col min-h-screen border-t-[1rem] border-[#F74F39] bg-[#F4F3FA] text-foreground">
+        {/* navbar */}
+        <div className="flex items-center justify-between px-10 pt-10">
+          {/* left options */}
+          <div className="flex items-center gap-3 font-semibold">
+            <img src="/icon.png" className="size-5" />
+            <img src="/logo.svg" className="h-5 mt-auto" />
+            <div className="hover:opacity-60 hover:cursor-pointer">Web</div>
+            <div className="hover:opacity-60 hover:cursor-pointer">iOS</div>
+            <div className="hover:opacity-60 hover:cursor-pointer">Android</div>
+          </div>
+          {/* right options */}
+          <div className="flex font-semibold gap-9">
+            <div className="hover:opacity-60 hover:cursor-pointer">Updates</div>
+            <div className="text-[#F74F39] hover:cursor-pointer">
+              Sign in{" "}
+              <span>
+                <ArrowRight
+                  className="inline rotate-[355deg]"
+                  strokeWidth={4}
+                />
+              </span>
+            </div>
+          </div>
+        </div>
 
-        <main className="flex-1">
-          <section
-            id="inicio"
-            className="w-full py-12 md:py-24 lg:py-32 xl:py-48"
-          >
-            <div className="container px-4 md:px-6">
-              <div className="flex flex-col items-center space-y-4 text-center">
-                <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                    Bienvenido a Nuestra Página
-                  </h1>
-                  <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                    Descubre la simplicidad y elegancia de nuestro diseño
+        {/* title */}
+        <div className="flex flex-col items-center mx-auto mt-20 text-5xl font-bold md:text-7xl text-neutral-800">
+          <p>Home to</p>
+          <div className="flex">
+            <p>all your </p>
+            <img src="/check.png" className="mx-2 my-auto size-11 md:size-16" />
+            <p className="text-[#F74F39]">lists</p>
+          </div>
+
+          {/* message big screen */}
+          <div className="hidden mt-5 text-xl font-semibold text-center opacity-60 md:block">
+            <p>Take notes, organize your work, and get more done with AI.</p>
+            <p>Simple, blazingly fast, and wrapped in a beautiful UI.</p>
+          </div>
+
+          {/* message small screens */}
+          <div className="mt-5 text-xl font-semibold text-center opacity-60 md:hidden">
+            <p>For team work, personal projects,</p>
+            <p>and everything in between.</p>
+          </div>
+
+          <div className="flex gap-3 mt-5 text-lg font-bold">
+            <button className="py-2 bg-[#F84F39] text-white rounded-full px-3">
+              Start today — it's free{" "}
+            </button>
+            <button className="py-2 bg-[#6B66DA] text-white rounded-full px-3">
+              Go Pro ✨
+            </button>
+          </div>
+        </div>
+
+        <div className="px-5">
+          {/* app sample */}
+          <div className="grid w-full grid-cols-4 gap-3 p-3 mx-auto mt-10 border-2 size-96 rounded-2xl border-[#EAE9F3] max-w-[1250px] h-auto mb-10">
+            {/* col 1 */}
+            <div className="hidden w-full h-full col-span-1 bg-white rounded-2xl lg:block">
+              {/* rectangles */}
+              <div className="grid grid-cols-2 gap-2 p-3">
+                <div className="w-full bg-[#F4F4F8] rounded-xl h-16"></div>
+                <div className="w-full bg-[#F4F4F8] rounded-xl h-16"></div>
+                <div className="w-full bg-[#F4F4F8] rounded-xl h-16"></div>
+                <div className="w-full bg-[#F4F4F8] rounded-xl h-16"></div>
+              </div>
+
+              {/* fake navigation */}
+              <div className="mt-6">
+                <div className="font-semibold text-gray-500 ms-3">List</div>
+                <NavigationItem
+                  active={true}
+                  className="bg-[#F3F3F7] py-2 hover:bg-[#F3F3F7]"
+                >
+                  <p className="font-semibold text-gray-800">
+                    <span className="me-3">💥</span> App Launch
                   </p>
-                </div>
-                <div className="space-x-4">
-                  <Button>Comenzar</Button>
-                  <Button variant="outline">Saber más</Button>
-                </div>
+                </NavigationItem>
+                <NavigationItem active={false}>
+                  <p className="py-2 font-semibold text-gray-800 hover:bg-[#F3F3F7]">
+                    <span className="me-3">🏘️</span>Kitchen Reno
+                  </p>
+                </NavigationItem>
+                <NavigationItem active={false}>
+                  <p className="py-2 font-semibold text-gray-800 hover:bg-[#F3F3F7]">
+                    <span className="me-3">🧘</span>Daily Habits
+                  </p>
+                </NavigationItem>
+                <NavigationItem active={false}>
+                  <p className="py-2 font-semibold text-gray-800 hover:bg-[#F3F3F7]">
+                    <span className="me-3">🍔</span>Recipes
+                  </p>
+                </NavigationItem>
+                <NavigationItem active={false}>
+                  <p className="py-2 font-semibold text-gray-800 hover:bg-[#F3F3F7]">
+                    <span className="me-3">✏️</span>Design Work
+                  </p>
+                </NavigationItem>
+              </div>
+
+              {/* fake user session */}
+              <div className="flex items-end gap-2 px-3 pb-3 h-72">
+                <div className="w-full h-10 bg-gray-200 rounded-full"></div>
+                <img
+                  src="/profile.jpg"
+                  alt="profile"
+                  className="rounded-full size-10"
+                />
               </div>
             </div>
-          </section>
 
-          <section
-            id="caracteristicas"
-            className="w-full py-12 md:py-24 lg:py-32 bg-muted/50"
-          >
-            <div className="container px-4 md:px-6">
-              <AppLaunchComplete />
+            {/* col mid */}
+            <div className="w-full h-full bg-white col-span-full lg:col-span-2 rounded-2xl">
+              <div className="w-full h-96"></div>
             </div>
-          </section>
-        </main>
-        <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-          <p className="text-xs text-muted-foreground">
-            © 2024 Acme Inc. Todos los derechos reservados.
-          </p>
-          <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-            <Link className="text-xs hover:underline underline-offset-4" to="#">
-              Términos de servicio
-            </Link>
-            <Link className="text-xs hover:underline underline-offset-4" to="#">
-              Privacidad
-            </Link>
-          </nav>
-        </footer>
+
+            {/* col 3 */}
+            <div className="hidden w-full h-full overflow-hidden bg-white lg:col-span-1 lg:block rounded-2xl">
+              <img
+                className="object-cover object-center w-full h-full"
+                src="/subsets/1244429.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
