@@ -1,89 +1,33 @@
-import AppLaunchComplete from "@/components/ui/AppLaunchComplete/AppLaunchComplete";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom"; // Importa el componente Link desde react-router-dom
+import { ArrowRight } from "lucide-react";
 
 const Home = () => {
   return (
     <>
-      <div className="flex flex-col min-h-screen bg-background text-foreground">
-        <header className="px-4 lg:px-6 h-14 flex items-center">
-          <Link className="flex items-center justify-center" to="#">
-            logo
-            <span className="ml-2 text-lg font-semibold">Acme Inc</span>
-          </Link>
-          <nav className="ml-auto flex gap-4 sm:gap-6">
-            <Link
-              className="text-sm font-medium hover:underline underline-offset-4 font-semibold"
-              to="#inicio"
-            >
-              Inicio
-            </Link>
-            <Link
-              className="text-sm font-medium hover:underline underline-offset-4 font-semibold"
-              to="#caracteristicas"
-            >
-              Características
-            </Link>
-            <Link
-              className="text-sm font-medium hover:underline underline-offset-4 font-semibold"
-              to="#galeria"
-            >
-              Galería
-            </Link>
-            <Link
-              className="text-sm font-medium hover:underline underline-offset-4 font-semibold"
-              to="#contacto"
-            >
-              Contacto
-            </Link>
-          </nav>
-        </header>
-
-        <main className="flex-1">
-          <section
-            id="inicio"
-            className="w-full py-12 md:py-24 lg:py-32 xl:py-48"
-          >
-            <div className="container px-4 md:px-6">
-              <div className="flex flex-col items-center space-y-4 text-center">
-                <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                    Bienvenido a Nuestra Página
-                  </h1>
-                  <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                    Descubre la simplicidad y elegancia de nuestro diseño
-                  </p>
-                </div>
-                <div className="space-x-4">
-                  <Button>Comenzar</Button>
-                  <Button variant="outline">Saber más</Button>
-                </div>
-              </div>
+      <div className="flex flex-col min-h-screen border-t-[1rem] border-[#F74F39] bg-[#F4F3FA] text-foreground">
+        {/* navbar */}
+        <div className="flex items-center justify-between px-10 pt-10">
+          {/* left options */}
+          <div className="flex items-center gap-3 font-semibold">
+            <img src="/icon.png" className="size-5" />
+            <img src="/logo.svg" className="h-5 mt-auto" />
+            <div className="hover:opacity-60 hover:cursor-pointer">Web</div>
+            <div className="hover:opacity-60 hover:cursor-pointer">iOS</div>
+            <div className="hover:opacity-60 hover:cursor-pointer">Android</div>
+          </div>
+          {/* right options */}
+          <div className="flex font-semibold gap-9">
+            <div className="hover:opacity-60 hover:cursor-pointer">Updates</div>
+            <div className="text-[#F74F39] hover:cursor-pointer">
+              Sign in{" "}
+              <span>
+                <ArrowRight
+                  className="inline rotate-[355deg]"
+                  strokeWidth={4}
+                />
+              </span>
             </div>
-          </section>
-
-          <section
-            id="caracteristicas"
-            className="w-full py-12 md:py-24 lg:py-32 bg-muted/50"
-          >
-            <div className="container px-4 md:px-6">
-              <AppLaunchComplete />
-            </div>
-          </section>
-        </main>
-        <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-          <p className="text-xs text-muted-foreground">
-            © 2024 Acme Inc. Todos los derechos reservados.
-          </p>
-          <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-            <Link className="text-xs hover:underline underline-offset-4" to="#">
-              Términos de servicio
-            </Link>
-            <Link className="text-xs hover:underline underline-offset-4" to="#">
-              Privacidad
-            </Link>
-          </nav>
-        </footer>
+          </div>
+        </div>
       </div>
     </>
   );
