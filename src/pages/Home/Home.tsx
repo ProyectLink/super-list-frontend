@@ -120,7 +120,7 @@ const Home = () => {
 
             {/* col mid */}
             <div className="w-full h-full bg-white col-span-full lg:col-span-2 rounded-2xl">
-              <div className="w-full h-96">Fake data middle</div>
+              <div className="w-full h-96"></div>
             </div>
 
             {/* col 3 */}
