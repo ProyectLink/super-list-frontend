@@ -122,7 +122,13 @@ const Home = () => {
             <div className="w-full h-full col-span-2 bg-white rounded-2xl"></div>
 
             {/* col 3 */}
-            <div className="w-full h-full col-span-1 bg-white rounded-2xl"></div>
+            <div className="w-full h-full col-span-1 overflow-hidden bg-white rounded-2xl">
+              <img
+                className="object-cover object-center w-full h-full"
+                src="/subsets/1244429.jpg"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>
