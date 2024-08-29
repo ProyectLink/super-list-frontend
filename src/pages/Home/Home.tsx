@@ -1,4 +1,6 @@
-import { ArrowRight } from "lucide-react";
+import NavigationItem from "@/components/navigation/NavigationItem";
+import { CheckBadgeIcon } from "@heroicons/react/24/outline";
+import { ArrowRight, CalendarDaysIcon, InboxIcon } from "lucide-react";
 
 const Home = () => {
   return (
