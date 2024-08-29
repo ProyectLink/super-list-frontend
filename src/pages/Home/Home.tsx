@@ -11,13 +11,21 @@ const Home = () => {
           <div className="flex items-center gap-3 font-semibold">
             <img src="/icon.png" className="size-5" />
             <img src="/logo.svg" className="h-5 mt-auto" />
-            <div className="hover:opacity-60 hover:cursor-pointer">MacOS</div>
-            <div className="hover:opacity-60 hover:cursor-pointer">Web</div>
-            <div className="hover:opacity-60 hover:cursor-pointer">iOS</div>
-            <div className="hover:opacity-60 hover:cursor-pointer">Android</div>
+            <div className="hidden hover:opacity-60 hover:cursor-pointer md:block">
+              MacOS
+            </div>
+            <div className="hidden hover:opacity-60 hover:cursor-pointer md:block">
+              Web
+            </div>
+            <div className="hidden hover:opacity-60 hover:cursor-pointer md:block">
+              iOS
+            </div>
+            <div className="hidden hover:opacity-60 hover:cursor-pointer md:block">
+              Android
+            </div>
           </div>
           {/* right options */}
-          <div className="flex font-semibold gap-9">
+          <div className="hidden font-semibold md:flex gap-9">
             <div className="hover:opacity-60 hover:cursor-pointer">Updates</div>
             <div className="hover:opacity-60 hover:cursor-pointer">Pricing</div>
             <div className="text-[#F74F39] hover:cursor-pointer">
@@ -30,14 +38,21 @@ const Home = () => {
               </span>
             </div>
           </div>
+
+          <div className="text-[#F74F39] hover:cursor-pointer font-bold md:hidden">
+            Download{" "}
+            <span>
+              <img src="/download.svg" className="inline size-6 ms-2" />
+            </span>
+          </div>
         </div>
 
         {/* title */}
-        <div className="flex flex-col items-center mx-auto mt-20 text-5xl font-bold md:text-7xl text-neutral-800">
+        <div className="flex flex-col items-center mx-auto mt-20 text-5xl font-bold md:text-8xl text-neutral-800">
           <p>Home to</p>
           <div className="flex">
             <p>all your </p>
-            <img src="/check.png" className="mx-2 my-auto size-11 md:size-16" />
+            <img src="/check.png" className="mx-2 mt-auto size-11 md:size-20" />
             <p className="text-[#F74F39]">lists</p>
           </div>
 
