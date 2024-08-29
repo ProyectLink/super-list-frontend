@@ -119,7 +119,43 @@ const Home = () => {
             </div>
 
             {/* col mid */}
-            <div className="w-full h-full bg-white col-span-full lg:col-span-2 rounded-2xl">
+            <div className="w-full h-full p-10 bg-white col-span-full lg:col-span-2 rounded-2xl">
+              <div className="flex items-center gap-2 ">
+                <div className="flex -space-x-3 overflow-hidden">
+                  <img
+                    className="inline-block w-10 h-10 rounded-full ring-2 ring-white z-[6]"
+                    src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                  />
+                  <img
+                    className="inline-block w-10 h-10 rounded-full ring-2 ring-white z-[5]"
+                    src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                  />
+                  <img
+                    className="inline-block w-10 h-10 rounded-full ring-2 ring-white z-[4]"
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                    alt=""
+                  />
+                  <img
+                    className="inline-block w-10 h-10 rounded-full ring-2 ring-white z-[3]"
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                  />
+                  <img
+                    className="inline-block w-10 h-10 rounded-full ring-2 ring-white z-[2]"
+                    src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                  />
+                </div>
+                <div className="font-bold text-gray-500">+6</div>
+              </div>
+              <p className="mt-8 text-4xl font-bold opacity-85">App Launch</p>
+              <p className="mt-5 text-lg font-semibold">
+                Hey team, here's a quick recap of what we're working on ahead of
+                the launch. Feel free to add any more notes or details to the
+                tasks.
+              </p>
               <div className="w-full h-96"></div>
             </div>
 
