@@ -69,10 +69,10 @@ const Home = () => {
           </div>
 
           <div className="flex gap-3 mt-5 text-lg font-bold">
-            <button className="py-2 bg-[#F84F39] text-white rounded-full px-3">
+            <button className="py-2 bg-[#F84F39] text-white rounded-full px-3 hover:scale-105 transition duration-200">
               Start today — it's free{" "}
             </button>
-            <button className="py-2 bg-[#6B66DA] text-white rounded-full px-3">
+            <button className="py-2 bg-[#6B66DA] text-white rounded-full px-3 hover:scale-105 transition duration-200">
               Go Pro ✨
             </button>
           </div>
