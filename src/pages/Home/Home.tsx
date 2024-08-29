@@ -1,6 +1,5 @@
 import NavigationItem from "@/components/navigation/NavigationItem";
-import { CheckBadgeIcon } from "@heroicons/react/24/outline";
-import { ArrowRight, CalendarDaysIcon, InboxIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const Home = () => {
   return (
@@ -64,7 +63,7 @@ const Home = () => {
 
         <div className="px-5">
           {/* app sample */}
-          <div className="grid w-full grid-cols-4 gap-3 p-3 mx-auto mt-10 border size-96 rounded-2xl border-[#EAE9F3] max-w-[1250px]">
+          <div className="grid w-full grid-cols-4 gap-3 p-3 mx-auto mt-10 border size-96 rounded-2xl border-[#EAE9F3] max-w-[1250px] h-auto mb-10">
             {/* col 1 */}
             <div className="w-full h-full col-span-1 bg-white rounded-2xl">
               {/* rectangles */}
@@ -75,7 +74,48 @@ const Home = () => {
                 <div className="w-full bg-[#F4F4F8] rounded-xl h-14"></div>
               </div>
 
-              <div className="font-semibold text-gray-500 ms-3">List</div>
+              {/* fake navigation */}
+              <div>
+                <div className="font-semibold text-gray-500 ms-3">List</div>
+                <NavigationItem
+                  active={true}
+                  className="bg-[#F3F3F7] py-2 hover:bg-[#F3F3F7]"
+                >
+                  <p className="font-semibold text-gray-800">
+                    <span className="me-3">💥</span> App Launch
+                  </p>
+                </NavigationItem>
+                <NavigationItem active={false}>
+                  <p className="py-2 font-semibold text-gray-800 hover:bg-[#F3F3F7]">
+                    <span className="me-3">🏘️</span>Kitchen Reno
+                  </p>
+                </NavigationItem>
+                <NavigationItem active={false}>
+                  <p className="py-2 font-semibold text-gray-800 hover:bg-[#F3F3F7]">
+                    <span className="me-3">🧘</span>Daily Habits
+                  </p>
+                </NavigationItem>
+                <NavigationItem active={false}>
+                  <p className="py-2 font-semibold text-gray-800 hover:bg-[#F3F3F7]">
+                    <span className="me-3">🍔</span>Recipes
+                  </p>
+                </NavigationItem>
+                <NavigationItem active={false}>
+                  <p className="py-2 font-semibold text-gray-800 hover:bg-[#F3F3F7]">
+                    <span className="me-3">✏️</span>Design Work
+                  </p>
+                </NavigationItem>
+              </div>
+
+              {/* fake user session */}
+              <div className="flex items-end gap-2 px-3 pb-3 h-72">
+                <div className="w-full h-10 bg-gray-200 rounded-full"></div>
+                <img
+                  src="/profile.jpg"
+                  alt="profile"
+                  className="rounded-full size-10"
+                />
+              </div>
             </div>
 
             {/* col mid */}
