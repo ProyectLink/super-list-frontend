@@ -1,5 +1,5 @@
 import NavigationItem from "@/components/navigation/NavigationItem";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckIcon } from "lucide-react";
 
 const Home = () => {
   return (
@@ -151,12 +151,150 @@ const Home = () => {
                 <div className="font-bold text-gray-500">+6</div>
               </div>
               <p className="mt-8 text-4xl font-bold opacity-85">App Launch</p>
-              <p className="mt-5 text-lg font-semibold">
+              <p className="w-10/12 mt-5 text-lg font-semibold">
                 Hey team, here's a quick recap of what we're working on ahead of
                 the launch. Feel free to add any more notes or details to the
                 tasks.
               </p>
-              <div className="w-full h-96"></div>
+
+              {/* activity list container */}
+              <div className="mt-8 space-y-6">
+                {/* activity item (user) */}
+                <div className="flex items-center justify-between gap-2">
+                  <div className="bg-[#F84F39] rounded-lg size-6 flex items-center justify-center">
+                    <CheckIcon size={20} className="text-white -rotate-12" />
+                  </div>
+
+                  <div className="text-xl line-through decoration-orange-500 decoration-2 text-neutral-400 grow">
+                    Launch readiness
+                  </div>
+
+                  <img
+                    className="rounded-full size-7"
+                    src="/profile/photo-1517365830460-955ce3ccd263.avif"
+                  />
+                </div>
+
+                {/* activity item (google - user) */}
+                <div className="flex items-center justify-between gap-2">
+                  <div className="bg-[#F84F39] rounded-lg size-6 flex items-center justify-center">
+                    <CheckIcon size={20} className="text-white -rotate-12" />
+                  </div>
+
+                  <div className="text-xl line-through decoration-orange-500 decoration-2 text-neutral-400 grow">
+                    Value proposition
+                  </div>
+
+                  <div className="flex gap-3">
+                    <img className="rounded-full size-7" src="/google.webp" />
+                    <img
+                      className="rounded-full size-7"
+                      src="/profile/photo-1500648767791-00dcc994a43e.avif"
+                    />
+                  </div>
+                </div>
+
+                {/* activity item (google - user) off */}
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center justify-center border-2 rounded-lg size-6 group/checkbox border-neutral-400 text-neutral-400">
+                    <CheckIcon
+                      size={18}
+                      className="invisible group-hover/checkbox:visible -rotate-12"
+                    />
+                  </div>
+
+                  <div className="text-xl text-black decoration-2 grow">
+                    Marketing strategy
+                  </div>
+
+                  <div className="flex gap-3">
+                    <img
+                      className="rounded-full size-7"
+                      src="/profile/photo-1550525811-e5869dd03032.avif"
+                    />
+                  </div>
+                </div>
+
+                {/* activity item (linear - user) off */}
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center justify-center border-2 rounded-lg size-6 group/checkbox border-neutral-400 text-neutral-400">
+                    <CheckIcon
+                      size={18}
+                      className="invisible group-hover/checkbox:visible -rotate-12"
+                    />
+                  </div>
+
+                  <div className="text-xl text-black decoration-2 grow">
+                    Design system update
+                  </div>
+
+                  <div className="flex gap-3">
+                    <img className="rounded-full size-7" src="/linear.webp" />
+                    <img
+                      className="rounded-full size-7"
+                      src="/profile/photo-1491528323818-fdd1faba62cc.avif"
+                    />
+                  </div>
+                </div>
+
+                {/* activity item (google - user) off */}
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center justify-center border-2 rounded-lg size-6 group/checkbox border-neutral-400 text-neutral-400">
+                    <CheckIcon
+                      size={18}
+                      className="invisible group-hover/checkbox:visible -rotate-12"
+                    />
+                  </div>
+
+                  <div className="text-xl text-black decoration-2 grow">
+                    Website design & dev
+                  </div>
+
+                  <div className="flex gap-3">
+                    <img className="rounded-full size-7" src="/profile.jpg" />
+                  </div>
+                </div>
+
+                {/* activity item (google - user) */}
+                <div className="flex items-center justify-between gap-2">
+                  <div className="bg-[#F84F39] rounded-lg size-6 flex items-center justify-center">
+                    <CheckIcon size={20} className="text-white -rotate-12" />
+                  </div>
+
+                  <div className="text-xl line-through decoration-orange-500 decoration-2 text-neutral-400 grow">
+                    Pricing strategy
+                  </div>
+
+                  <div className="flex gap-3">
+                    <img className="rounded-full size-7" src="/slack.png" />
+                    <img
+                      className="rounded-full size-7"
+                      src="/profile/65b30376cfc91a74393dc2c4_Jon_ts9dtj.webp"
+                    />
+                  </div>
+                </div>
+
+                {/* activity item (google - user) off */}
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center justify-center border-2 rounded-lg size-6 group/checkbox border-neutral-400 text-neutral-400">
+                    <CheckIcon
+                      size={18}
+                      className="invisible group-hover/checkbox:visible -rotate-12"
+                    />
+                  </div>
+
+                  <div className="text-xl text-black decoration-2 grow">
+                    Prepare analytics
+                  </div>
+
+                  <div className="flex gap-3">
+                    <img
+                      className="rounded-full size-7"
+                      src="/profile/photo-1472099645785-5658abf4ff4e.avif"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* col 3 */}
