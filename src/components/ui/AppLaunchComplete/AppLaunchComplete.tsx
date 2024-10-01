@@ -2,13 +2,14 @@ import { useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { FaRocket, FaHome, FaSun, FaHamburger, FaPaintBrush } from "react-icons/fa";
 
 const initialProjects = [
-  { id: 1, name: "Lanzamiento de aplicaciones", icon: "🚀" },
-  { id: 2, name: "Cocina Reno", icon: "🏠" },
-  { id: 3, name: "Hábitos diarios", icon: "🌞" },
-  { id: 4, name: "Recetas", icon: "🍔" },
-  { id: 5, name: "Trabajo de diseño", icon: "🎨" },
+  { id: 1, name: "Lanzamiento de aplicaciones", icon: <FaRocket /> },
+  { id: 2, name: "Cocina Reno", icon: <FaHome /> },
+  { id: 3, name: "Hábitos diarios", icon: <FaSun /> },
+  { id: 4, name: "Recetas", icon: <FaHamburger /> },
+  { id: 5, name: "Trabajo de diseño", icon: <FaPaintBrush /> },
 ];
 
 const initialTasks = [
