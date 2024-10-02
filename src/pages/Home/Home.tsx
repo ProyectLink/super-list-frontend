@@ -1,5 +1,6 @@
 import NavigationItem from "@/components/navigation/NavigationItem";
 import { ArrowRight, CheckIcon } from "lucide-react";
+import { Footer } from "./Footer";
 
 const Home = () => {
   return (
@@ -325,6 +326,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };
