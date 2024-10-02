@@ -4,6 +4,13 @@ import { apps, otherLinks, social, superlist } from "./footer-data";
 export function Footer() {
 	return (
 		<footer>
+			<div className="bg-[#20202e]">
+				<img
+					src="https://cdn.prod.website-files.com/625593a881b8ebd169835ca5/656e5cc2feeeec34855f3714_img.svg"
+					alt="wave"
+					className="w-full h-auto max-w-[1600px]"
+				/>
+			</div>
 			<div className="pt-[100px] pb-[50px] bg-[#20202e] text-white">
 				<div className="mb-16 sm:px-[100px] px-5 py-[65px] flex lg:flex-row flex-col lg:gap-y-0 gap-y-5 justify-center lg:max-w-[1250px] max-w-[500px] mx-auto">
 					<div className="flex flex-1">
