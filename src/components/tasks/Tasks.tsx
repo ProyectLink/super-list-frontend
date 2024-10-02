@@ -12,7 +12,7 @@ export const Tasks = () => {
       <TasksContainer>
         <div className="w-11/12 mx-auto">
           <div className="mt-10 text-5xl font-bold opacity-85">Tasks</div>
-          <Alert />
+          <Alert message={" View, sort and access all of your tasks in one place"} />
         </div>
 
         <div className="mt-8">
