@@ -1,5 +1,6 @@
 import NavigationItem from "@/components/navigation/NavigationItem";
 import { ArrowRight, CheckIcon } from "lucide-react";
+import { Footer } from "./Footer";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
@@ -337,6 +338,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };
