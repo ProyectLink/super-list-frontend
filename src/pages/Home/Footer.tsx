@@ -22,7 +22,7 @@ export function Footer() {
 								<Link
 									key={label}
 									to={href}
-									className="text-[15px] min-h-[30px] flex items-center justify-start"
+									className="text-[15px] min-h-[30px] flex items-center justify-start hover:opacity-50 duration-300"
 								>
 									{label}
 								</Link>
@@ -34,7 +34,7 @@ export function Footer() {
 								<Link
 									key={label}
 									to={href}
-									className="text-[15px] min-h-[30px] flex items-center justify-start"
+									className="text-[15px] min-h-[30px] flex items-center justify-start hover:opacity-50 duration-300"
 								>
 									{label}
 								</Link>
@@ -48,7 +48,7 @@ export function Footer() {
 								<Link
 									key={label}
 									to={href}
-									className="text-[15px] min-h-[30px] flex items-center justify-start"
+									className="text-[15px] min-h-[30px] flex items-center justify-start hover:opacity-50 duration-300"
 								>
 									{label}
 								</Link>
@@ -60,7 +60,7 @@ export function Footer() {
 								<Link
 									key={label}
 									to={href}
-									className="text-[15px] min-h-[30px] flex items-center justify-start"
+									className="text-[15px] min-h-[30px] flex items-center justify-start hover:opacity-50 duration-300"
 								>
 									{label}
 								</Link>
@@ -70,19 +70,22 @@ export function Footer() {
 					<div className="lg:max-w-[230px] max-w-full">
 						<div className="flex flex-col flex-1 items-stretch gap-1.5">
 							<p className="text-lg font-bold mb-2.5 text-[#8f89fa]">Updates</p>
-							<div className="rounded-2xl pt-4 pl-5 lg:pr-[50px] pr-5 pb-5 bg-[#2c2c3d] w-full hover:scale-105 duration-300">
+							<div className="rounded-2xl pt-4 pl-5 lg:pr-[50px] pr-5 pb-5 bg-[#2c2c3d] hover:bg-[#303041] w-full hover:scale-105 duration-300">
 								<p className="text-[#f84f39] text-[30px] mb-4 font-semibold">
 									Pick Your <br className="lg:block hidden" /> Calendar
 								</p>
-								<span className="bg-[#f84f39] text-white text-sm font-semibold px-[14px] py-[5px] rounded-full">
+								<Link
+									to={"/"}
+									className="bg-[#f84f39] text-white hover:opacity-80 duration-300 text-sm font-semibold px-[14px] py-[5px] rounded-full"
+								>
 									v 1.16.0
-								</span>
+								</Link>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div className="min-h-[50px] flex items-end justify-center">
-					<p className="text-center text-[#696f81] hover:text-white text-sm">
+					<p className="text-center text-[#696f81] hover:text-white text-sm hover:cursor-pointer duration-300">
 						ⓒ Superlist 2024
 					</p>
 				</div>
