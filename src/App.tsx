@@ -7,7 +7,7 @@ import SubTask from "@/pages/Tasks/SubTask";
 import Home from "./pages/Home/Home";
 import Register from "./pages/Register/Register";
 import NotFound from "./pages/Not-Found/NotFound";
-import { ThemeProvider } from "./providers/ThemeProvider";
+import { ThemeProvider } from "./components/theme-provider";
 
 const App = () => {
   return (
