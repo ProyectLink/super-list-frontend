@@ -112,27 +112,27 @@ const Home = () => {
                   className="bg-[#F3F3F7] py-2 hover:bg-[#F3F3F7]"
                 >
                   <p className="font-semibold text-gray-800">
-                    <span className="me-3">💥</span> App Launch
+                    <span className="me-3">&#128165;</span> App Launch
                   </p>
                 </NavigationItem>
                 <NavigationItem active={false}>
                   <p className="py-2 font-semibold text-gray-800 hover:bg-[#F3F3F7]">
-                    <span className="me-3">🏘️</span>Kitchen Reno
+                    <span className="me-3">&#127968;</span>Kitchen Reno
                   </p>
                 </NavigationItem>
                 <NavigationItem active={false}>
                   <p className="py-2 font-semibold text-gray-800 hover:bg-[#F3F3F7]">
-                    <span className="me-3">🧘</span>Daily Habits
+                    <span className="me-3">&#129496;</span>Daily Habits
                   </p>
                 </NavigationItem>
                 <NavigationItem active={false}>
                   <p className="py-2 font-semibold text-gray-800 hover:bg-[#F3F3F7]">
-                    <span className="me-3">🍔</span>Recipes
+                    <span className="me-3">&#127828;</span>Recipes
                   </p>
                 </NavigationItem>
                 <NavigationItem active={false}>
                   <p className="py-2 font-semibold text-gray-800 hover:bg-[#F3F3F7]">
-                    <span className="me-3">✏️</span>Design Work
+                    <span className="me-3">&#9997;</span>Design Work
                   </p>
                 </NavigationItem>
               </div>
