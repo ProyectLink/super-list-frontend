@@ -1,4 +1,4 @@
-# Contributing to NexusTimer
+# Contributing to SuperList clone project
 
 Welcome to the SuperList clone project! We appreciate your interest in contributing to our open-source project. Your contributions help us improve and enhance the project for all users. Here are some guidelines to get you started:
 
