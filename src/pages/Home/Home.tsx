@@ -1,7 +1,20 @@
 import NavigationItem from "@/components/navigation/NavigationItem";
 import { ArrowRight, CheckIcon } from "lucide-react";
+import { Footer } from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+  const navigate = useNavigate();
+
+  const handleSigninClick = () => {
+    navigate('/login');
+  };
+
+  const handleStartToday = () => {
+    navigate('/register');
+  };
+
   return (
     <>
       <div className="flex flex-col min-h-screen border-t-[1rem] md:border-t-[0.3rem] border-[#F74F39] bg-[#F4F3FA]">
@@ -28,7 +41,7 @@ const Home = () => {
           <div className="hidden font-semibold md:flex gap-9">
             <div className="hover:opacity-60 hover:cursor-pointer">Updates</div>
             <div className="hover:opacity-60 hover:cursor-pointer">Pricing</div>
-            <div className="text-[#F74F39] hover:cursor-pointer">
+            <div className="text-[#F74F39] hover:cursor-pointer" onClick={ handleSigninClick }>
               Sign in{" "}
               <span>
                 <ArrowRight
@@ -69,7 +82,7 @@ const Home = () => {
           </div>
 
           <div className="flex gap-3 mt-5 text-lg font-bold">
-            <button className="py-2 bg-[#F84F39] text-white rounded-full px-3 hover:scale-105 transition duration-200">
+            <button className="py-2 bg-[#F84F39] text-white rounded-full px-3 hover:scale-105 transition duration-200" onClick={ handleStartToday }>
               Start today — it's free{" "}
             </button>
             <button className="py-2 bg-[#6B66DA] text-white rounded-full px-3 hover:scale-105 transition duration-200">
@@ -99,27 +112,27 @@ const Home = () => {
                   className="bg-[#F3F3F7] py-2 hover:bg-[#F3F3F7]"
                 >
                   <p className="font-semibold text-gray-800">
-                    <span className="me-3">💥</span> App Launch
+                    <span className="me-3">&#128165;</span> App Launch
                   </p>
                 </NavigationItem>
                 <NavigationItem active={false}>
                   <p className="py-2 font-semibold text-gray-800 hover:bg-[#F3F3F7]">
-                    <span className="me-3">🏘️</span>Kitchen Reno
+                    <span className="me-3">&#127968;</span>Kitchen Reno
                   </p>
                 </NavigationItem>
                 <NavigationItem active={false}>
                   <p className="py-2 font-semibold text-gray-800 hover:bg-[#F3F3F7]">
-                    <span className="me-3">🧘</span>Daily Habits
+                    <span className="me-3">&#129496;</span>Daily Habits
                   </p>
                 </NavigationItem>
                 <NavigationItem active={false}>
                   <p className="py-2 font-semibold text-gray-800 hover:bg-[#F3F3F7]">
-                    <span className="me-3">🍔</span>Recipes
+                    <span className="me-3">&#127828;</span>Recipes
                   </p>
                 </NavigationItem>
                 <NavigationItem active={false}>
                   <p className="py-2 font-semibold text-gray-800 hover:bg-[#F3F3F7]">
-                    <span className="me-3">✏️</span>Design Work
+                    <span className="me-3">&#9997;</span>Design Work
                   </p>
                 </NavigationItem>
               </div>
@@ -325,6 +338,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };
