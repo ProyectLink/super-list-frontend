@@ -1,3 +1,4 @@
+"use client";
 import { PlusIcon } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import NavigationContainer from "./NavigationContainer";
@@ -8,8 +9,9 @@ import {
   InboxIcon,
   BoltIcon,
 } from "@heroicons/react/24/outline";
+import { Button } from "../ui/button";
 
-export const Navigation = () => {
+export const Navigation = ({ handleDialog }) => {
   return (
     <>
       <NavigationContainer className="flex flex-col justify-between h-full">
@@ -35,10 +37,14 @@ export const Navigation = () => {
         </div>
 
         <div className="flex flex-col gap-2 px-3">
-          <button className="flex items-center justify-center w-full gap-1 py-2 font-semibold text-indigo-500 border rounded-full hover:text-black hover:border-gray-300">
+          <Button
+            variant="outline"
+            className="flex items-center justify-center w-full gap-1 py-2 font-semibold text-indigo-500 border rounded-full hover:text-black hover:border-gray-300"
+            onClick={handleDialog}
+          >
             <BoltIcon className="w-4 h-4" />
             Upgrade to Pro
-          </button>
+          </Button>
           <div className="flex items-center gap-1 px-3 mb-3">
             <div className="flex items-center justify-center w-10 h-10 transition duration-200 border rounded-full hover:bg-gray-200 hover:cursor-pointer">
               <Avatar className="w-7 h-7">
