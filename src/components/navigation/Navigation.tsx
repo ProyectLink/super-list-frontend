@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { PlusIcon } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import NavigationContainer from "./NavigationContainer";
@@ -10,22 +12,35 @@ import {
 } from "@heroicons/react/24/outline";
 
 export const Navigation = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const [activeNavItem, setActiveNavItem] = useState(location.pathname);
+
+  const handleNavigation = ( path: string ) => {
+    navigate(path);
+    setActiveNavItem(path);
+  }
+
   return (
     <>
       <NavigationContainer className="flex flex-col justify-between h-full">
         <div className="mt-20">
-          <NavigationItem active={false}>
+          <NavigationItem active={activeNavItem === '/inbox'}
+          onClick={() => navigate("/inbox")}>
             <InboxIcon strokeWidth={2} className="w-4 h-4 text-orange-500" />
             <p className="font-[400]">Inbox</p>
           </NavigationItem>
-          <NavigationItem active={false}>
+          <NavigationItem active={activeNavItem === '/today'} 
+          onClick={() => handleNavigation("/today")}>
             <CalendarDaysIcon
               strokeWidth={2}
               className="w-4 h-4 text-orange-500"
             />
             <p className="font-[400] ">Today</p>
           </NavigationItem>
-          <NavigationItem active={true}>
+          <NavigationItem active={activeNavItem === '/all-tasks'}
+          onClick={() => handleNavigation("/all-tasks")}>
             <CheckBadgeIcon
               strokeWidth={2}
               className="w-4 h-4 text-orange-500"
