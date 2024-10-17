@@ -1,3 +1,4 @@
+"use client";
 import LayoutApplication from "@/components/layouts/LayoutApplication";
 import LayoutApplicationNavigation from "@/components/layouts/LayoutApplicationNavigation";
 import LayoutApplicationSection from "@/components/layouts/LayoutApplicationSection";
@@ -6,6 +7,7 @@ import { Outlet, useParams } from "react-router-dom";
 
 const Layout = ({ main }: { main: React.ReactNode }) => {
   const params = useParams();
+
   return (
     <>
       <LayoutApplication>

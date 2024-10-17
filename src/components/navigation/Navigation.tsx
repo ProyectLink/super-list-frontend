@@ -10,6 +10,9 @@ import {
   InboxIcon,
   BoltIcon,
 } from "@heroicons/react/24/outline";
+import { Button } from "../ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"; // Import dialog components
+import Pricing from "../navigation/Pricing"; // Import your Pricing component
 
 export const Navigation = () => {
   const navigate = useNavigate();
@@ -37,7 +40,7 @@ export const Navigation = () => {
               strokeWidth={2}
               className="w-4 h-4 text-orange-500"
             />
-            <p className="font-[400] ">Today</p>
+            <p className="font-[400]">Today</p>
           </NavigationItem>
           <NavigationItem active={activeNavItem === '/all-tasks'}
           onClick={() => handleNavigation("/all-tasks")}>
@@ -50,10 +53,23 @@ export const Navigation = () => {
         </div>
 
         <div className="flex flex-col gap-2 px-3">
-          <button className="flex items-center justify-center w-full gap-1 py-2 font-semibold text-indigo-500 border rounded-full hover:text-black hover:border-gray-300">
-            <BoltIcon className="w-4 h-4" />
-            Upgrade to Pro
-          </button>
+          {/* Wrap Button with DialogTrigger */}
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button
+                variant="outline"
+                className="flex items-center justify-center w-full gap-1 py-2 font-semibold text-indigo-500 border rounded-full hover:text-black hover:border-gray-300"
+              >
+                <BoltIcon className="w-4 h-4" />
+                Upgrade to Pro
+              </Button>
+            </DialogTrigger>
+            {/* Display Pricing component inside the dialog */}
+            <DialogContent className="h-[90vh] w-[90vw] max-w-[600px]">
+              <Pricing />
+            </DialogContent>
+          </Dialog>
+
           <div className="flex items-center gap-1 px-3 mb-3">
             <div className="flex items-center justify-center w-10 h-10 transition duration-200 border rounded-full hover:bg-gray-200 hover:cursor-pointer">
               <Avatar className="w-7 h-7">
