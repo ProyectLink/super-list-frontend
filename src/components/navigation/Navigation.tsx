@@ -30,7 +30,7 @@ export const Navigation = () => {
       <NavigationContainer className="flex flex-col justify-between h-full">
         <div className="mt-20">
           <NavigationItem active={activeNavItem === '/inbox'}
-          onClick={() => navigate("/inbox")}>
+          onClick={() => handleNavigation("/inbox")}>
             <InboxIcon strokeWidth={2} className="w-4 h-4 text-orange-500" />
             <p className="font-[400]">Inbox</p>
           </NavigationItem>
