@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "@/pages/Login/Login";
 import Tasks from "@/components/tasks/Tasks";
 import Today from "@/pages/Today/Today";
+import Inbox from "@/pages/Inbox/Inbox";
 import Layout from "@/components/layouts/Layout";
 import SubTask from "@/pages/Tasks/SubTask";
 import Home from "./pages/Home/Home";
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="" element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="inbox" element={<Layout main={<Inbox />} />} />
           <Route path="today" element={<Layout main={<Today />} />} />
           <Route path="all-tasks" element={<Layout main={<Tasks />} />}>
             <Route path=":taskId" element={<SubTask />} />
