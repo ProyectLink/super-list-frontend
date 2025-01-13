@@ -13,6 +13,12 @@ import {
 import { Button } from "../ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"; // Import dialog components
 import Pricing from "../navigation/Pricing"; // Import your Pricing component
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
+import { ProfileDropdown } from "../dropdown-menu/ProfileDropdown";
 
 export const Navigation = () => {
   const navigate = useNavigate();
@@ -72,10 +78,17 @@ export const Navigation = () => {
 
           <div className="flex items-center gap-1 px-3 mb-3">
             <div className="flex items-center justify-center w-10 h-10 transition duration-200 border rounded-full hover:bg-gray-200 hover:cursor-pointer">
-              <Avatar className="w-7 h-7">
-                <AvatarImage src="https://avatars.githubusercontent.com/u/119996547?s=96&v=4" />
-                <AvatarFallback>CN</AvatarFallback>
-              </Avatar>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Avatar className="w-7 h-7">
+                    <AvatarImage src="https://avatars.githubusercontent.com/u/119996547?s=96&v=4" />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-44" align="start"  sideOffset={8} alignOffset={-5}>
+                <ProfileDropdown/>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
             <div className="flex items-center h-8 gap-1 font-semibold text-gray-500 bg-gray-200 rounded-full w-max ps-3 grow hover:cursor-pointer hover:bg-gray-300 hover:text-gray-900">
               <PlusIcon className="w-4 h-4" /> Create new
